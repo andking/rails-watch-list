@@ -13,7 +13,7 @@ class BookmarksController < ApplicationController
         else
           render :new
         end
-      end
+    end
 
       def destroy
         @bookmark = Bookmark.find(params[:id])
@@ -30,6 +30,4 @@ class BookmarksController < ApplicationController
       def bookmark_params
         params.require(:bookmark).permit(:comment, :movie_id)
       end
-
-
 end

@@ -1,0 +1,23 @@
+<div class="banner">
+  <div class="container">
+    <%# <h1>Watch list tracker</h1> %>
+<div class="wrapper">
+<h1>Watch list tracker</h1>
+</div>
+<p><i>Save any kind of movies</i></p>
+    <a href="/"><button class="bn30">Create List</button></a>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row cards">
+    <% @lists.each do |list| %>
+      <div class="cards">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    <h3><%= link_to list.name, list_path(list)%></h3>
+        </div>
+        </div>
+      <% end %>
+    </div>
+</div>
